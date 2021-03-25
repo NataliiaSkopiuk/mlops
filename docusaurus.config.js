@@ -1,12 +1,12 @@
 module.exports = {
   title: 'Learn KubeDirector!',
   tagline: 'Education resources for learning KubeDirector',
-  url: 'https://hpe-container-platform-community.github.io/',
-  baseUrl: '/learn-kubedirector/',
+  url: 'https://kmathur2.github.io/',
+  baseUrl: '/mlops/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'hpe-container-platform-community',
-  projectName: 'learn-kubedirector',
+  organizationName: 'kmathur2',
+  projectName: 'mlops',
   themeConfig: {
     navbar: {
       title: 'Learn KubeDirector!',
