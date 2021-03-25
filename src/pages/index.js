@@ -8,20 +8,20 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'What is KubeDirector?',
+    title: 'What is MLOps?',
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        KubeDirector is a CNCF project that simplifies implementing stateful scaleout application clusters on Kubenetes.
+        MLOps is a CNCF project that simplifies implementing stateful scaleout application clusters on Kubenetes.
       </>
     ),
   },
   {
-    title: 'Learning KubeDirector',
+    title: 'Learning MLOps',
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        This website provides a structured and  progressive learning path to KubeDirector mastery.
+        This website provides a structured and  progressive learning path to MLOps mastery.
       </>
     ),
   },
@@ -30,7 +30,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        A 'lab-in-a-box' is provided making learning and experimenting with KubeDirector a cinch.
+        A 'lab-in-a-box' is provided making learning and experimenting with MLOps a cinch.
       </>
     ),
   },
@@ -57,7 +57,7 @@ function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Education resources for learning KubeDirector <head />">
+      description="Education resources for learning MLOps <head />">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>

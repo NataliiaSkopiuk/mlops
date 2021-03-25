@@ -1,12 +1,12 @@
 module.exports = {
-  title: 'Learn KubeDirector!',
-  tagline: 'Education resources for learning KubeDirector',
-  url: 'https://hpe-container-platform-community.github.io/',
-  baseUrl: '/learn-kubedirector/',
+  title: 'Ezmeral MLOps!',
+  tagline: 'Education resources for learning MLOps',
+  url: 'https://kmathur2.github.io/',
+  baseUrl: '/mlops/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'hpe-container-platform-community',
-  projectName: 'learn-kubedirector',
+  organizationName: 'kmathur2',
+  projectName: 'mlops',
   themeConfig: {
     navbar: {
       title: 'Learn KubeDirector!',
@@ -53,11 +53,11 @@ module.exports = {
           items: [
             {
               label: 'Learn KubeDirector on GitHub',
-              href: 'https://github.com/hpe-container-platform-community/learn-kubedirector',
+              href: 'https://github.com/kmathur2/mlops',
             },
             {
               label: 'KubeDirector Lab on GitHub',
-              href: 'https://github.com/hpe-container-platform-community/kubedirector-lab',
+              href: 'https://github.com/kmathur2/mlops',
             },
             {
               label: 'KubeDirector on GitHub',
@@ -79,7 +79,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/hpe-container-platform-community/learn-kubedirector/edit/master/',
+            'https://github.com/kmathur2/mlops/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
