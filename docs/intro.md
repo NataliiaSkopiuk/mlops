@@ -2,6 +2,9 @@
 id: intro
 title: Introduction
 slug: /
+
+OPERATIONAL MACHINE LEARNING AT ENTERPRISE SCALE
+Bring DevOps-like speed and agility to ML workflows with support for every stage of the machine learning lifecycle: from sandbox experimentation with your choice of ML/DL frameworks, to model training on containerized distributed clusters, to deploying and tracking models in production.
 ---
 
 This site is split into five sections:
@@ -15,4 +18,4 @@ This site is split into five sections:
 
 Each section builds on the previous section.
 
-You only need to take the sections to meeet your own learning goals.  For example, if you are only interested in learning how to administer KubeDirector, you can stop when you have finished the section **Using KD**.
+You only need to take the sections to meeet your own learning goals.  For example, if you are only interested in learning how to administer MLOps, you can stop when you have finished the section **Using KD**.

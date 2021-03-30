@@ -9,9 +9,9 @@ module.exports = {
   projectName: 'mlops',
   themeConfig: {
     navbar: {
-      title: 'Learn KubeDirector!',
+      title: 'Learn MLOps!',
       logo: {
-        alt: 'Learn KubeDirector!',
+        alt: 'Learn MLOps!',
         src: 'img/logo.svg',
       },
       items: [
