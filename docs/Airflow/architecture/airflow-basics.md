@@ -3,7 +3,8 @@
 ### Airflow
 Apache Airflow is a platform to programmatically author, schedule and monitor workflows. Airflow is an Apache incubator project that is mature and has a good community momentum.
 
-![Airflow Multi Node](airflow-base.png)	
+![Airflow Multi Node](airflow-base.png)
+	
 
 ### Kubernetes (k8s)	
 Kubernetes(k8s) is a distributed workload orchestration system similar to Borg or Mesos. K8s can orchestrate containerized workloads on bare metal or on VMs and provides primitives modelled in a declarative way to manage the compute, memory, storage, networking, isolation, and life cycle. K8s can be accessed via kubectl(cli) or the APIs that consume the declarative specs. In the backend, the intent in the declarative specs are fulfilled by k8s core controllers that take actions (like create containers, network service, mount volume etc). k8s provides building blocks for stateless (Pods, Deployment) and stateful applications (statefulset) deployment. K8s controllers for these building blocks monitor the deployed instances to ensure cardinality, host to volume mapping across recreates, recovery on failures etc. 
@@ -53,7 +54,7 @@ TODO
 It could drain celery workers nodes and k8s executor pods to prepare for upgrade.
 Restarting airflow UI and Scheduler on detecting new DAGs in the DAG folder.
 
-![Airflow Cluster](airflow-cluster.png)
+![Airflow Cluster](airflow-base.png)
 
 #### Redis
 RedisSpec is required if .Spec.executor is celery. 
@@ -74,54 +75,6 @@ Airflow scheduler and workers could use PVCs for mounting data volumes that cont
 ### Airflow Pods
 Airflow Pods have the airflow container (scheduler,worker) and DAG Sidecar container. The DAG sidecar gets DAGs from the configured DAG source. In case of PVC as DAG source, the backing PV needs to be  mounted as RWX (RW many) or ROX (RO many). 
 
-![Airflow Pods](airflow-pod.png)
+![Airflow Pods](airflow-base.png)
 
 
-# Telemetry
-## Logging
-The airflow operator logs to the standard output and error file streams which is recommended for logging in containerized workloads. The K8s cluster level logging captures these logs in a central place. For airflow components it is recommended to log to the standard file streams as well.
-
-## Metrics
-The controller uses `pbweb/airflow-prometheus-exporter:latest` as a side-car to expose prometheus metircs for Airflow on port `9112`.
-
-# Failure Modes and Remediation
-Failures modes of the AirflowCluster, AirflowBase and Airflow controller are considered in addition to general failure modes.
-
-## Process
-If any of the pod processes dies or crashes, kubelet detects container exit and restarts it. Also Pod readiness and liveness checks are used to detect and restart Pods that have functionally degraded.
-
-## Node
-One could use  cluster.Spec.Affinity.*.topologyKey as “kubernetes.io/hostname” to spread Pods across Nodes within a Zone. This would limit the effect of node failures within a zone. K8s would reschedule the pods from failed node to another available node. Non-local PVs are moved to the new node and attached to the new pod. This means the user would experience reduced capacity during the time a new pod is created and added back to the cluster. For statefulsets with just 1 replica, we rely on the StatefulSet controller to recreate a pod on another node.
-
-![Airflow Zone](airflow-zone-spread.png)
-
-## Zonal
-One could use  cluster.Spec.Affinity.*.topologyKey as “failure-domain.beta.kubernetes.io/zone” to spread Pods across Zones within a Region in a cluster that is deployed across zones. This would limit the effect of Zonal and node failures within a region.
-
-![Airflow Region](airflow-region-spread.png)
-
-
-Since PVs are zonal resources on most Cloud Providers, Pods may not be rescheduled into another available zone. This means the user may experience permanent reduced capacity unless the PV is unlinked manually and added back.
-
-## Control plane
-Deployed Airflow components do not require the operator control plane for normal operation. However if the cluster health degrades due to a failure, control plane is needed to recover and restore it to full health. Operator control plane health is monitored by kubernetes and recovered. Once recovered the operator would resync with the Airflow CRs and heal them if needed.
-
-## Storage
-Single instance storage failures would manifest and degraded Pod health and would be rescheduled. But since the PVC association is binding, rescheduled pods may face the same issue. 
-
-TODO: on PV failure, detach PV from PVC and get a new PV ?
-
-# Security
-## Authn
-The k8s API server uses authentication tokens in order to authorize requests. This model is a standard and is integrated with the IAM providers on most public clouds. MySQL operator managed MySQL instances are protected by a password that is either user provided in a Secret or auto generated and saved in a Secret. K8s IAM and RBAC protects this Secret. Similarly Redis operator managed Redis cluster provides data protection. 
-TODO: Security for airflow components and NFS DAGs
-
-## Authz
-The Kubernetes API server provides for configurable RBAC (Role Based Access Control). The Airflow operator operates with a particular service account that would need appropriate RBAC to create and modify StatefulSet, Service, ConfigMap, Secrets and Pods. Same applies to MySQL operator and Redis operators if used.
-
-## Data in Flight
-MySQL supports encrypted connections. Clients should use ssl to connect to MySQL server. Similarly Redis offers secure connection to clients. Airflow UI enables SSL for secure HTTP access. 
-TODO: Confirm Airflow uses secured connections to MySQL and Redis
-
-## Data at Rest
-MySQL operator and Redis operator ensures secure data at rest. K8s API data is encrypted at the application layer in the API server. For  DAG volumes, one could use TDE (Transparent Disk Encryption) for both the PVs and Object Storage.
