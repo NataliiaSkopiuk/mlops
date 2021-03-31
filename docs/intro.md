@@ -10,6 +10,7 @@ OPERATIONAL MACHINE LEARNING AT ENTERPRISE SCALE
 Bring DevOps-like speed and agility to ML workflows with support for every stage of the machine learning lifecycle: from sandbox experimentation with your choice of ML/DL frameworks, to model training on containerized distributed clusters, to deploying and tracking models in production.
 
 - **Introduction** (this section)
+- [**Airflow**](/docs/Airflow/architecture/airflow-basics) - Airflow operator
 - [**Lab Installation**](/docs/lab/overview) - install a lab for KD
 - [**KD Overview**](/docs/about-kd/intro) - KD goals, concepts and terminology.
 - [**Using KD**](/docs/kd-user/intro) - learn how to use KD
