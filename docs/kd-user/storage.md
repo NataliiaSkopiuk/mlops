@@ -7,9 +7,9 @@ title: Using Storage
 
 Some of the YAML file basenames in the `deploy/example_clusters/` have a `-stor` suffix. This is just a convention used among these example files to indicate that the virtual cluster spec requests persistent storage. Several of the examples have both persistent and non-persistent variants.
 
-Note that if you are using persistent storage, you may wish to create a `KubeDirectorConfig` object (as described in the next section [configuring KD](configuring)), for declaring a specific `defaultStorageClassName` value.
+Note that if you are using persistent storage, you may wish to create a `MLOpsConfig` object (as described in the next section [configuring KD](configuring)), for declaring a specific `defaultStorageClassName` value.
 
-Alternately, you can declare a `storageClassName` in the persistent storage spec section of each virtual cluster spec. If no storage class value is declared in either the KubeDirectorConfig or the virtual cluster, then the K8s default storage class will be used.
+Alternately, you can declare a `storageClassName` in the persistent storage spec section of each virtual cluster spec. If no storage class value is declared in either the MLOpsConfig or the virtual cluster, then the K8s default storage class will be used.
 
 
 ## Explore lab environment
@@ -50,7 +50,7 @@ Now deploy the cluster:
 
 ```
 $ kubectl apply -f deploy/example_clusters/cr-cluster-ubuntu18.04-stor.yaml
-kubedirectorcluster.kubedirector.hpe.com/ubuntu18.04-persistent created
+MLOpscluster.MLOps.hpe.com/ubuntu18.04-persistent created
 ```
 
 Let's take a look at the PersistentVolumes:
@@ -91,8 +91,8 @@ We can see that the cluster's `etc` and `home` folders are persistent.
 Here is the spec for `deploy/example_clusters/cr-cluster-ubuntu18.04-stor.yaml`:
 
 ```yaml
-apiVersion: "kubedirector.hpe.com/v1beta1"
-kind: "KubeDirectorCluster"
+apiVersion: "MLOps.hpe.com/v1beta1"
+kind: "MLOpsCluster"
 metadata:
   name: "ubuntu18.04-persistent"
 spec:
@@ -111,13 +111,13 @@ spec:
       size: "40Gi"
 ```
 
-The KubeDirectorCluster [spec](https://github.com/bluek8s/kubedirector/wiki/KubeDirectorCluster-Definition) has a definition for `PersistentStorageSpec`.  Inside that element, are the fields `size` and `storageClassName`.  
+The MLOpsCluster [spec](https://github.com/bluek8s/MLOps/wiki/MLOpsCluster-Definition) has a definition for `PersistentStorageSpec`.  Inside that element, are the fields `size` and `storageClassName`.  
 
 It would appear that we can modify  `deploy/example_clusters/cr-cluster-ubuntu18.04-stor.yaml` to add the storageClassName as follows:
 
 ```yaml
-apiVersion: "kubedirector.hpe.com/v1beta1"
-kind: "KubeDirectorCluster"
+apiVersion: "MLOps.hpe.com/v1beta1"
+kind: "MLOpsCluster"
 metadata:
   name: "ubuntu18.04-persistent"
 spec:

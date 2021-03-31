@@ -7,19 +7,19 @@ In this section, you will setup the lab environment.
 
 ## Clone git repositories
 
-You need to clone both the kubediretor-lab and kubedirector git repositories.
+You need to clone both the kubediretor-lab and MLOps git repositories.
 
-Note that you will clone the kubedirector repository **inside** the folder where you cloned the kubedirector-lab repository.
+Note that you will clone the MLOps repository **inside** the folder where you cloned the MLOps-lab repository.
 
 ```
-git clone https://github.com/hpe-container-platform-community/kubedirector-lab
-cd kubedirector-lab
-git clone https://github.com/bluek8s/kubedirector
+git clone https://github.com/hpe-container-platform-community/MLOps-lab
+cd MLOps-lab
+git clone https://github.com/bluek8s/MLOps
 ```
 
 ## Install vagrant plugin
 
-The KubeDirector lab requires Virtualbox Guest Additions to be installed in the virtual machine and having the same version as the Virtualbox application. 
+The MLOps lab requires Virtualbox Guest Additions to be installed in the virtual machine and having the same version as the Virtualbox application. 
 
 The vagrant-vbguest plugin ensures Virtualbox Guest Additions is correctly installed.
 
@@ -46,7 +46,7 @@ vagrant reload
 ```
 :::
 
-## Run the KubeDirector Lab UI
+## Run the MLOps Lab UI
 
 ```
 vagrant ssh -c ./run_lab.sh
@@ -89,7 +89,7 @@ No resources found in default namespace.
 ## Shutdown the environment
 
 When you are ready to shutdown the environment inside your host terminal (NOT the terminal in the Lab UI),
-change to the directory where you cloned kubedirector-lab and issue the command:
+change to the directory where you cloned MLOps-lab and issue the command:
 
 ```
 vagrant suspend

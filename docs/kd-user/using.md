@@ -27,15 +27,15 @@ kubectl create -f deploy/example_clusters/cr-cluster-ubuntu18.04.yaml
 This should report the following:
 
 ```
-kubedirectorcluster.kubedirector.hpe.com/ubuntu18.04 created
+MLOpscluster.MLOps.hpe.com/ubuntu18.04 created
 ```
 
 ## Listing KD clusters
 
-We can run the following to list the KubeDirector clusters:
+We can run the following to list the MLOps clusters:
 
 ```
-kubectl get KubeDirectorCluster
+kubectl get MLOpsCluster
 ```
 
 :::info Use your TAB!
@@ -45,10 +45,10 @@ TAB completion will save you a lot of typing. For example:
 
 ```
 kubectl get k<<TAB>>
-kubectl get kubedirector<<TAB>><<TAB>>
-kubedirectorapps.kubedirector.hpe.com      kubedirectorclusters.kubedirector.hpe.com  kubedirectorconfigs.kubedirector.hpe.com
-kubectl get kubedirectorcl<<TAB>>
-kubectl get kubedirectorclusters.kubedirector.hpe.com<<ENTER>>
+kubectl get MLOps<<TAB>><<TAB>>
+MLOpsapps.MLOps.hpe.com      MLOpsclusters.MLOps.hpe.com  MLOpsconfigs.MLOps.hpe.com
+kubectl get MLOpscl<<TAB>>
+kubectl get MLOpsclusters.MLOps.hpe.com<<ENTER>>
 ```
 :::
 
@@ -65,7 +65,7 @@ We can retrieve the cluster details using the kubectl describe command.
 For example:
 
 ```
-kubectl describe KubeDirectorClusters ubuntu18.04
+kubectl describe MLOpsClusters ubuntu18.04
 ```
 
 This shows:
@@ -75,8 +75,8 @@ Name:         ubuntu18.04
 Namespace:    default
 Labels:       <none>
 Annotations:  <none>
-API Version:  kubedirector.hpe.com/v1beta1
-Kind:         KubeDirectorCluster
+API Version:  MLOps.hpe.com/v1beta1
+Kind:         MLOpsCluster
 Metadata:
 ... 
 {some attributes removed from output for breivity}
@@ -126,12 +126,12 @@ Events:                              <none>
 
 ## View KD cluster services
 
-You can query the KubeDirector cluster services with the following:  `kubectl get services -l kubedirector.hpe.com/kdcluster=CLUSTERNAME`
+You can query the MLOps cluster services with the following:  `kubectl get services -l MLOps.hpe.com/kdcluster=CLUSTERNAME`
 
 For example:
 
 ```
-kubectl get services -l kubedirector.hpe.com/kdcluster=ubuntu18.04
+kubectl get services -l MLOps.hpe.com/kdcluster=ubuntu18.04
 ```
 
 For me, this returns:
@@ -193,7 +193,7 @@ Returns:
 ```
 NAME                            READY   STATUS    RESTARTS   AGE
 kdss-gpdft-0                    1/1     Running   0          5h8m
-kubedirector-7f9d95c9d5-mpw22   1/1     Running   0          5h8m
+MLOps-7f9d95c9d5-mpw22   1/1     Running   0          5h8m
 ```
 
 Pod `kdss-gpdft-0` looks like it is our pod, let's check:
@@ -211,13 +211,13 @@ Priority:     0
 Node:         localhost.localdomain/10.0.2.15
 Start Time:   Wed, 09 Sep 2020 15:43:45 +0000
 Labels:       controller-revision-hash=kdss-gpdft-646b7c67d5
-              kubedirector.hpe.com/appCatalog=local
-              kubedirector.hpe.com/headless=ubuntu18.04
-              kubedirector.hpe.com/kdapp=ubuntu18x
-              kubedirector.hpe.com/kdcluster=ubuntu18.04
-              kubedirector.hpe.com/role=vanilla_ubuntu
+              MLOps.hpe.com/appCatalog=local
+              MLOps.hpe.com/headless=ubuntu18.04
+              MLOps.hpe.com/kdapp=ubuntu18x
+              MLOps.hpe.com/kdcluster=ubuntu18.04
+              MLOps.hpe.com/role=vanilla_ubuntu
               statefulset.kubernetes.io/pod-name=kdss-gpdft-0
-Annotations:  kubedirector.hpe.com/kdapp-prettyName: Ubuntu 18.04
+Annotations:  MLOps.hpe.com/kdapp-prettyName: Ubuntu 18.04
 Status:       Running
 IP:           172.17.0.4
 IPs:
@@ -227,7 +227,7 @@ Containers:
 ...
 ```
 
-We can see the label `kubedirector.hpe.com/kdcluster=ubuntu18.04`.  
+We can see the label `MLOps.hpe.com/kdcluster=ubuntu18.04`.  
 Our kdcluster ID (Name) is `ubuntu18.04` so we know that `kdss-gpdft-0` is our ubuntu18.04 pod.
 
 
@@ -235,7 +235,7 @@ Our kdcluster ID (Name) is `ubuntu18.04` so we know that `kdss-gpdft-0` is our u
 As a shortcut in the future, we can find the pod for our kdcluster by name using:
 
 ```
-kubectl get pods -l kubedirector.hpe.com/kdcluster=ubuntu18.04
+kubectl get pods -l MLOps.hpe.com/kdcluster=ubuntu18.04
 ```
 
 Here we specify the name of our kdcluster: `ubuntu18.04`
@@ -290,13 +290,13 @@ You can now exit the SSH session.
 We are finished with this exercise, so let's delete the cluster:
 
 ```
-kubectl delete  KubeDirectorCluster ubuntu18.04
+kubectl delete  MLOpsCluster ubuntu18.04
 ```
 
 This should return:
 
 ```
-kubedirectorcluster.kubedirector.hpe.com "ubuntu18.04" deleted
+MLOpscluster.MLOps.hpe.com "ubuntu18.04" deleted
 ```
 
 ## Exercises
@@ -309,4 +309,4 @@ You may need to [increase the size](/docs/lab/advanced) of your lab Virtual Mach
 
 ## References
 
-See KubeDirector [documentation](https://github.com/bluek8s/kubedirector/blob/master/doc/virtual-clusters.md)
+See MLOps [documentation](https://github.com/bluek8s/MLOps/blob/master/doc/virtual-clusters.md)

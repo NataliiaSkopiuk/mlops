@@ -3,11 +3,11 @@ id: intro
 title: Introduction
 slug: /
 
-OPERATIONAL MACHINE LEARNING AT ENTERPRISE SCALE
-Bring DevOps-like speed and agility to ML workflows with support for every stage of the machine learning lifecycle: from sandbox experimentation with your choice of ML/DL frameworks, to model training on containerized distributed clusters, to deploying and tracking models in production.
+
 ---
 
-This site is split into five sections:
+OPERATIONAL MACHINE LEARNING AT ENTERPRISE SCALE
+Bring DevOps-like speed and agility to ML workflows with support for every stage of the machine learning lifecycle: from sandbox experimentation with your choice of ML/DL frameworks, to model training on containerized distributed clusters, to deploying and tracking models in production.
 
 - **Introduction** (this section)
 - [**Lab Installation**](/docs/lab/overview) - install a lab for KD

@@ -19,7 +19,7 @@ I wasn't able to find documentation on the Config CLI so let's do some exploring
 
 The Config CLI is installed automatically in containers that have a config package.
 
-If this exercise we use the Centos 7 KubeDirectorCluster running from the previous [lesson](/docs/kd-img-dev/configpackage) that has a config package defined:
+If this exercise we use the Centos 7 MLOpsCluster running from the previous [lesson](/docs/kd-img-dev/configpackage) that has a config package defined:
 
 ```
 {
@@ -33,7 +33,7 @@ If this exercise we use the Centos 7 KubeDirectorCluster running from the previo
 
 :::
 
-You should still have your `KubeDirectorCluster` running from the previous [lesson](/docs/kd-img-dev/configpackage) if not, start it now.
+You should still have your `MLOpsCluster` running from the previous [lesson](/docs/kd-img-dev/configpackage) if not, start it now.
 
 Next open a shell session on the cluster:
 
