@@ -4,6 +4,12 @@ module.exports = {
       'intro', 
       'prereqs'
     ],
+    "Airflow": [
+      'Airflow/architecture/airflow-basics'
+    ],
+    "Kubeflow": [
+      'Kubeflow/architecture/kubeflow-components'
+    ],
     "Lab Installation": [
       'lab/overview',
       'lab/install1',
