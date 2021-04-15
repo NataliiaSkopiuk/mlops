@@ -11,6 +11,7 @@ Bring DevOps-like speed and agility to ML workflows with support for every stage
 
 - **Introduction** (this section)
 - [**Airflow**](/docs/Airflow/architecture/airflow-basics) - Airflow operator
+- [**Kubeflow**](/docs/Kubeflow/architecture/kubeflow-components) - Kubeflow operator
 - [**Lab Installation**](/docs/lab/overview) - install a lab for KD
 - [**KD Overview**](/docs/about-kd/intro) - KD goals, concepts and terminology.
 - [**Using KD**](/docs/kd-user/intro) - learn how to use KD
@@ -19,4 +20,4 @@ Bring DevOps-like speed and agility to ML workflows with support for every stage
 
 Each section builds on the previous section.
 
-You only need to take the sections to meeet your own learning goals.  For example, if you are only interested in learning how to administer MLOps, you can stop when you have finished the section **Using KD**.
+You only need to take the sections to meet your own learning goals.  For example, if you are only interested in learning how to administer MLOps, you can stop when you have finished the section **Using KD**.

@@ -53,11 +53,11 @@ module.exports = {
           items: [
             {
               label: 'Learn KubeDirector on GitHub',
-              href: 'https://github.com/kmathur2/mlops',
+              href: 'https://github.com/nataliiaskopiuk/mlops',
             },
             {
               label: 'KubeDirector Lab on GitHub',
-              href: 'https://github.com/kmathur2/mlops',
+              href: 'https://github.com/nataliiaskopiuk/mlops',
             },
             {
               label: 'KubeDirector on GitHub',
@@ -79,7 +79,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/kmathur2/mlops/edit/master/',
+            'https://github.com/nataliiaskopiuk/mlops/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
