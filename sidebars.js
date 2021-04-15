@@ -6,7 +6,7 @@ module.exports = {
     ],
     "Airflow": [
     {
-      'Airflow Architecture': ['af-basics']
+      'Airflow Architecture': ['Airflow/architecture/af-basics']
       }
     ],
     "Kubeflow": [
