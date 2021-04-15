@@ -5,7 +5,9 @@ module.exports = {
       'prereqs'
     ],
     "Airflow": [
-      'Airflow/architecture/airflow-basics'
+    {
+      'Airflow/architecture': ['Airflow/architecture/airflow-basics']
+      }
     ],
     "Kubeflow": [
       'Kubeflow/architecture/kubeflow-components'
