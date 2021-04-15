@@ -1,4 +1,7 @@
-## Kubeflow Components 
+---
+id: kf-components 
+title: Kubeflow Components
+---
 
 Current Kubeflow Operator version is `1.2`.
 

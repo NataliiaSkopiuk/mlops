@@ -10,7 +10,9 @@ module.exports = {
       }
     ],
     "Kubeflow": [
-      'Kubeflow/architecture/kubeflow-components'
+    {
+      'Kubeflow Architecture': ['Kubeflow/architecture/kf-components']
+      }
     ],
     "Lab Installation": [
       'lab/overview',

@@ -3,8 +3,6 @@ id: af-basics
 title: Airflow Introduction
 ---
 
-# Introduction
-
 ### Airflow
 Apache Airflow is a platform to programmatically author, schedule and monitor workflows. Airflow is an Apache incubator project that is mature and has a good community momentum.
 
