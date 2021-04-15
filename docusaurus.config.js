@@ -1,11 +1,11 @@
 module.exports = {
   title: 'Ezmeral MLOps!',
   tagline: 'Education resources for learning MLOps',
-  url: 'https://kmathur2.github.io/',
+  url: 'https://nataliiaskopiuk.github.io/',
   baseUrl: '/mlops/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'kmathur2',
+  organizationName: 'NataliiaSkopiuk',
   projectName: 'mlops',
   themeConfig: {
     navbar: {
