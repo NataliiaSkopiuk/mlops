@@ -6,13 +6,20 @@ module.exports = {
     ],
     "Airflow": [
     {
-      'Airflow Architecture': ['Airflow/architecture/af-basics']
+      'Airflow Architecture': [
+        'Airflow/architecture/af-basics'
+        ]
       }
     ],
     "Kubeflow": [
     {
-      'Kubeflow Architecture': ['Kubeflow/architecture/kf-components'],
-      'Kubernetes Admin Tutorials': ['Kubeflow/k8s-admin-tutorials/prometheus-tutorial']
+      'Kubeflow Architecture': [
+        'Kubeflow/architecture/kf-components',
+        'Kubeflow/architecture/kf-intro'
+       ],
+        'Kubernetes Admin Tutorials': [
+          'Kubeflow/k8s-admin-tutorials/prometheus-tutorial'
+        ]
       }
     ],
     "Lab Installation": [
