@@ -27,7 +27,7 @@ You may need to specify `Enable Spark` option as well in order to enable compute
 
 If Air Gap is configured on the platform, notice that all the required images should be pushed to the registry before Kubeflow installation.  
 
-See the list of images to be installed in the [relative section](kubeflow-images-list). 
+See the list of images to be installed in the [relative section](kubeflow-images-list.md). 
 
 ### Validating the Result of Kubeflow Components Deployment 
 
