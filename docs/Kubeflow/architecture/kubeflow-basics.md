@@ -1,5 +1,5 @@
 ---
-id: kf-intro
+id: kf-basics
 title: Kubeflow Introduction
 ---
 

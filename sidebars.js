@@ -6,15 +6,15 @@ module.exports = {
     ],
     "Airflow": [
     {
-      'Airflow Architecture': [
+      'AF Architecture': [
         'Airflow/architecture/af-basics'
         ]
       }
     ],
     "Kubeflow": [
     {
-      'Kubeflow Architecture': [
-        'Kubeflow/architecture/kf-intro',
+      'KF Architecture': [
+        'Kubeflow/architecture/kf-basics',
         'Kubeflow/architecture/kf-components',
         'Kubeflow/architecture/kf-profiles-tenants-integration'
         ],
@@ -23,8 +23,11 @@ module.exports = {
         'Kubeflow/deployment/kf-installation-steps',
         'Kubeflow/deployment/kf-images-list'
         ],
-      'Kubernetes Admin Tutorials': [
+      'K8s Admin Tutorials': [
         'Kubeflow/k8s-admin-tutorials/prometheus-tutorial'
+        ],
+      'KF Known Issues': [
+        'Kubeflow/known-issues/kf-known-issues'
         ]
       }
     ],
