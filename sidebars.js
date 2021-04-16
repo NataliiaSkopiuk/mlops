@@ -14,8 +14,9 @@ module.exports = {
     "Kubeflow": [
     {
       'Kubeflow Architecture': [
+        'Kubeflow/architecture/kf-intro',
         'Kubeflow/architecture/kf-components',
-        'Kubeflow/architecture/kf-intro'
+        'Kubeflow/architecture/kf-profiles-tenants-integration'
        ],
         'Kubernetes Admin Tutorials': [
           'Kubeflow/k8s-admin-tutorials/prometheus-tutorial'
