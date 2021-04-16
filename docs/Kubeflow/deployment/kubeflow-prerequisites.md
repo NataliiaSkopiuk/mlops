@@ -5,7 +5,7 @@ title: Kubeflow Requirements
 
 **Supported Kubernetes versions:** 1.17, 1.18, 1.19, 1.20. 
 
-##### Resources: 
+#### Resources: 
 
 The minimum number of nodes for compute cluster: 2 (1 primary, 1 secondary) 
 
@@ -15,7 +15,7 @@ The minimum core and memory resources required:
 
 - Memory (GB): 160 
 
-##### Storage: 
+#### Storage: 
 
 In order to have storage for dynamic persistent volumes provisioning, the HPE Ezmeral Container Platform must be configured in either of the following ways: 
 
@@ -23,7 +23,7 @@ In order to have storage for dynamic persistent volumes provisioning, the HPE Ez
 
 - **HPE Ezmeral Data Fabric for Kubernetes:** This uses a Data Fabric Kubernetes cluster that must be created and registered as described in Creating a New Data Fabric Cluster. 
 
-##### Dynamic Volume Provisioning for Persistent Volumes 
+#### Dynamic Volume Provisioning for Persistent Volumes 
 
 Persistent Volumes (PVs) for Kubeflow are dynamically provisioned using default Storage Class.  
 
