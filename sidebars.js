@@ -22,7 +22,7 @@ module.exports = {
         'Kubeflow/deployment/kf-requirements',
         'Kubeflow/deployment/kf-installation-steps',
         'Kubeflow/deployment/kf-images-list'
-        ]
+        ],
       'Kubernetes Admin Tutorials': [
         'Kubeflow/k8s-admin-tutorials/prometheus-tutorial'
         ]
