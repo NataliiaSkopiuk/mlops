@@ -28,6 +28,10 @@ module.exports = {
         'Kubeflow/k8s-admin-tutorials/kiali-tutorial',
         'Kubeflow/k8s-admin-tutorials/grafana-tutorial'
         ],
+      'User Tutorials': [
+        'Kubeflow/user-tutorials/kf-ui-access',
+        'Kubeflow/user-tutorials/hdfs-access'
+        ],
       'KF Known Issues': [
         'Kubeflow/known-issues/kf-known-issues'
         ]
