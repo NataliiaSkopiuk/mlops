@@ -30,6 +30,7 @@ module.exports = {
         ],
       'User Tutorials': [
         'Kubeflow/user-tutorials/kf-ui-access',
+        'Kubeflow/user-tutorials/gh-issue-sum-tutorial-p1',
         'Kubeflow/user-tutorials/hdfs-access'
         ],
       'KF Known Issues': [
