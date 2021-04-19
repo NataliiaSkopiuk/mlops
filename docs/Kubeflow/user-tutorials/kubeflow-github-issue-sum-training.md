@@ -7,7 +7,7 @@ title: GitHub Issue Summarization Example. Part 1
 
 _Note:_ The following tutorial is based on the example [here](https://github.com/mapr/kubeflow-examples/blob/master/github_issue_summarization/02_training_the_model.md). 
 
-Upload the [kubeflow-tutorial.zip](kubeflow_tutorials_5.3.zip) if you did not do that before.
+Upload the [kubeflow-tutorial.zip](kubeflow_tutorials_5.3.zip) if you have not done that before.
 
 1. Open Kubeflow Dashboard and click on **Notebook Servers** item in the left menu.
 
@@ -32,7 +32,7 @@ In air gap: `<registry_ip>:<port>/issue-summarization-notebook-cpu:latest`
 
 6. Launch the notebook server and wait until its running state. 
 
-_Note:_ In case your environment has proxy values, you need to create and apply an egress.yaml file that will allow the newly created notebook to connect to the internet. An example is shown below:
+_Note:_ In case your environment has proxy values, you need to create and apply an egress.yaml file that will allow the newly created notebook to connect to the internet.
 
 Then apply the yaml file with  
 
