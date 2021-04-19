@@ -67,6 +67,8 @@ _Note:_ If using proxy, first run the bellow command:
 
 ### Run Spark as a part of KFP 
 
+Upload the [kubeflow-tutorial.zip](kubeflow_tutorials_5.3.zip) if you have not done that before.
+
 1. In Kubeflow UI create a new Notebook Server.  
 
 
